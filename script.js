@@ -109,6 +109,20 @@ $(document).ready(function() {
       }
     });
   }
-  
-
- 
+  // JavaScript to toggle the visibility of the navbar
+document.getElementById('menuIcon').addEventListener('click', function() {
+  var navbar = document.getElementById('navbar');
+  if (navbar.style.display === 'flex') {
+      navbar.style.display = 'none';
+  } else {
+      navbar.style.display = 'flex';
+  }
+});
+// JavaScript to close the menu when a menu item is clicked
+var menuItems = document.querySelectorAll('.navbar li a');
+menuItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+        var navbar = document.getElementById('navbar');
+        navbar.style.display = 'none';
+    });
+});
