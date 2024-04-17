@@ -112,10 +112,10 @@ $(document).ready(function() {
   // JavaScript to toggle the visibility of the navbar
 document.getElementById('menuIcon').addEventListener('click', function() {
   var navbar = document.getElementById('navbar');
-  if (navbar.style.display === 'flex') {
-      navbar.style.display = 'none';
-  } else {
+  if (navbar.style.display === 'none') {
       navbar.style.display = 'flex';
+  } else {
+      navbar.style.display = 'none';
   }
 });
 // JavaScript to close the menu when a menu item is clicked
