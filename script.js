@@ -117,12 +117,16 @@ document.getElementById('menuIcon').addEventListener('click', function() {
   } else {
       navbar.style.display = 'none';
   }
+
 });
-// JavaScript to close the menu when a menu item is clicked
 var menuItems = document.querySelectorAll('.navbar li a');
+var navbar = document.getElementById('navbar');
+
 menuItems.forEach(function(item) {
     item.addEventListener('click', function() {
-        var navbar = document.getElementById('navbar');
-        navbar.style.display = 'none';
+        // Check if the screen width is below 768 pixels
+        if (window.innerWidth < 768) {
+            navbar.style.display = 'none';
+        }
     });
 });
