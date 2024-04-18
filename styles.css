@@ -28,19 +28,24 @@ body {
   width: 1170px;
   margin: auto;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 /*---------------------------Header---------------------------*/
 
 .header-area {
   padding: 25px 0;
   transition: padding 0.3s;
+  width: 100%;
 }
 
 .header-area.sticky {
   position: fixed;
   top: 0;
   left: 0;
-  /* width: 100%; */
+  width: 100%;
   z-index: 99;
   background-color: #202020;
   padding: 5px;
@@ -462,9 +467,6 @@ profile-photo .img {
     width: 750px;
   }
 }
-.navbar {
-  display: none;
-}
 
 .menu_icon {
   display: block;
@@ -473,10 +475,12 @@ profile-photo .img {
 /* Mobile Layout */
 @media only screen and (max-width: 767px) {
   .container {
-    width: 350px;
+    width: 95vw;
+    margin: 1rem;
   }
 
   .header .menu_icon {
+    background-color: #202020;
     display: block;
   }
   .header {
@@ -495,7 +499,6 @@ profile-photo .img {
     align-items: center;
     position: absolute;
     top: 100%;
-    left: 0%;
     background-color: #202020;
     width: 100%;
     z-index: 1000;
